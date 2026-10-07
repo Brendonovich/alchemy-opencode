@@ -1,0 +1,24 @@
+{
+  "name": "alchemy-opencode",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./cloudflare": "./src/Cloudflare.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -b"
+  },
+  "peerDependencies": {
+    "@opencode/sdk": "^2.0.24",
+    "alchemy": "^2.0.0-beta.81",
+    "effect": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4",
+    "@opencode/sdk": "2.0.24",
+    "alchemy": "2.0.0-beta.81",
+    "effect": "4.0.0",
+    "typescript": "^5.9.3"
+  }
+}

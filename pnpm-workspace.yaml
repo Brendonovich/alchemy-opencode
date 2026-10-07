@@ -1,0 +1,37 @@
+packages:
+  - .
+  - example
+
+overrides:
+  # @opencode/* 2.0.24 is built against effect rc.112 (effect/unstable/*); keep its own copy.
+  "@opencode/sdk>effect": 4.0.0-rc.112
+  "@opencode/core>effect": 4.0.0-rc.112
+  "@opencode/util>effect": 4.0.0-rc.112
+  "@opencode/client>effect": 4.0.0-rc.112
+  "@opencode/plugin>effect": 4.0.0-rc.112
+  "@opencode/schema>effect": 4.0.0-rc.112
+  "@opencode/server>effect": 4.0.0-rc.112
+  "@opencode/protocol>effect": 4.0.0-rc.112
+  "@opencode/ai>effect": 4.0.0-rc.112
+  "@opencode/codemode>effect": 4.0.0-rc.112
+  "@opencode/plugin-browser>effect": 4.0.0-rc.112
+  "@opencode/simulation>effect": 4.0.0-rc.112
+  "@effect/platform-node@4.0.0-rc.112>effect": 4.0.0-rc.112
+  "@effect/platform-node-shared@4.0.0-rc.112>effect": 4.0.0-rc.112
+  "@effect/opentelemetry@4.0.0-rc.112>effect": 4.0.0-rc.112
+  "@opencode/util>@effect/platform-node": 4.0.0-rc.112
+  "@opencode/util>@effect/platform-node-shared": 4.0.0-rc.112
+  "@opencode/util>@effect/opentelemetry": 4.0.0-rc.112
+  "@opencode/server>@effect/platform-node": 4.0.0-rc.112
+  "@opencode/server>@effect/platform-node-shared": 4.0.0-rc.112
+  # ^4.0.0-rc.112 resolves to 4.0.0, which imports effect/ByteSize (absent in rc.112).
+  "@effect/platform-node@4.0.0-rc.112>@effect/platform-node-shared": 4.0.0-rc.112
+
+allowBuilds:
+  esbuild: true
+  workerd: true
+  sharp: true
+  "@parcel/watcher": true
+  msgpackr-extract: false
+  tree-sitter-bash: false
+  tree-sitter-powershell: false
